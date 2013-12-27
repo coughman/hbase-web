@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,6 +26,7 @@ import com.cloudera.cdk.hbase.data.service.PartyDatasetService;
 
 @Controller
 public class WebController {
+	static Logger logger = Logger.getLogger(WebController.class);
 
     //TODO: Change this to proper bean injections via spring annotations..
     PartyDatasetService partyDatasetService = new PartyDatasetService();
@@ -69,6 +71,7 @@ public class WebController {
             
         }
         catch(Exception e){
+        	logger.error("Error", e);
             redirectAttributes.addFlashAttribute("error","An error occurred.");
             return "redirect:/";	
         }
