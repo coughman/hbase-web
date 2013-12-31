@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -27,13 +28,21 @@ import com.cloudera.cdk.hbase.data.service.PartyDatasetService;
 @Controller
 public class WebController {
 	static Logger logger = Logger.getLogger(WebController.class);
-
-    //TODO: Change this to proper bean injections via spring annotations..
-    PartyDatasetService partyDatasetService = new PartyDatasetService();
-    AddressDatasetService addressDatasetService = new AddressDatasetService();
-    PartyAddressDatasetService partyAddressDatasetService = new PartyAddressDatasetService();
-    AgreementDatasetService agreementDatasetService = new AgreementDatasetService();
-    PartyAgreementDatasetService partyAgreementDatasetService = new PartyAgreementDatasetService();
+    
+	@Autowired
+	PartyDatasetService partyDatasetService;
+	
+	@Autowired
+    AddressDatasetService addressDatasetService;
+    
+	@Autowired
+    PartyAddressDatasetService partyAddressDatasetService;
+	
+	@Autowired
+	AgreementDatasetService agreementDatasetService;
+	
+	@Autowired
+	PartyAgreementDatasetService partyAgreementDatasetService;
 
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String showForm(PartyRequest partyRequest) {
