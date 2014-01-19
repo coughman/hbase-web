@@ -75,7 +75,7 @@ public class WebController {
             // Agreement
             partyAgreements = partyAgreementDatasetService.scan(partyRequest.getId().toString());
             for(PartyAgreement partyAgreement : partyAgreements){
-                agreements.add(agreementDatasetService.get(partyAgreement.getValue().toString()));
+                agreements.add(agreementDatasetService.get(partyAgreement.getAgreementId().toString()));
             }
             
         }
