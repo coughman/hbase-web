@@ -58,8 +58,8 @@ public class WebController {
         }
 
         Party party;
-        List<PartyAddress> partyAddresses;
-        List<Address> addresses = new ArrayList<Address>(); 
+        //List<PartyAddress> partyAddresses;
+        //List<Address> addresses = new ArrayList<Address>(); 
         List<PartyAgreement> partyAgreements;
         List<Agreement> agreements = new ArrayList<Agreement>(); 
 
@@ -67,10 +67,10 @@ public class WebController {
             party = partyDatasetService.get(partyRequest.getId().toString());
             
             // Address
-            partyAddresses = partyAddressDatasetService.scan(partyRequest.getId().toString());
-            for(PartyAddress partyAddress : partyAddresses){
-                addresses.add(addressDatasetService.get(partyAddress.getValue().toString()));
-            }
+            //partyAddresses = partyAddressDatasetService.scan(partyRequest.getId().toString());
+            //for(PartyAddress partyAddress : partyAddresses){
+            //    addresses.add(addressDatasetService.get(partyAddress.getValue().toString()));
+            //}
             
             // Agreement
             partyAgreements = partyAgreementDatasetService.scan(partyRequest.getId().toString());
@@ -90,7 +90,7 @@ public class WebController {
         }
         
         model.addAttribute("party", party);
-        model.addAttribute("addresses", addresses);
+        //model.addAttribute("addresses", addresses);
         model.addAttribute("agreements", agreements);
 
         return "results";

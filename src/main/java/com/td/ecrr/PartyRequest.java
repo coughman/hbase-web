@@ -5,18 +5,18 @@ import javax.validation.constraints.NotNull;
 
 public class PartyRequest {
     @NotNull
-    @Min(1)
-    private Integer id;
+    //@Min(1)
+    private String id;
 
     public String toString() {
         return "PartyRequest(" + id + ")";
     }
     
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 }
