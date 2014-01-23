@@ -32,11 +32,11 @@ public class WebController {
 	@Autowired
 	PartyDatasetService partyDatasetService;
 	
-	@Autowired
-    AddressDatasetService addressDatasetService;
+//	@Autowired
+//    AddressDatasetService addressDatasetService;
     
-	@Autowired
-    PartyAddressDatasetService partyAddressDatasetService;
+//	@Autowired
+//    PartyAddressDatasetService partyAddressDatasetService;
 	
 	@Autowired
 	AgreementDatasetService agreementDatasetService;

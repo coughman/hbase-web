@@ -27,12 +27,12 @@ public class Application {
 	@Value("${hbase.url:repo:hbase:localhost}")
 	private String hbaseUrl; 
 	
-	@Bean
+	/*@Bean
 	AddressDatasetService addressDatasetService() {
 		AddressDatasetService service = new AddressDatasetService();
 		service.setHbaseUrl(this.hbaseUrl);
 		return service;
-	}
+	}*/
 
 	@Bean
 	AgreementDatasetService agreementDatasetService() {
@@ -41,18 +41,18 @@ public class Application {
 		return service;
 	}
 	
-	@Bean
+	/*@Bean
 	EventDatasetService eventDatasetService() {
 		EventDatasetService service = new EventDatasetService();
 		service.setHbaseUrl(this.hbaseUrl);
 		return service;
-	}
+	}*/
 	
-	@Bean
+/*	@Bean
 	PartyAddressDatasetService partyAddressDatasetService() {
 		PartyAddressDatasetService service = new PartyAddressDatasetService(this.hbaseUrl);
 		return service;
-	}
+	}*/
 	
 	@Bean
 	PartyAgreementDatasetService partyAgreementDatasetService() {
