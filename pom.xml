@@ -5,7 +5,7 @@
 
     <groupId>com.td</groupId>
     <artifactId>ecrr</artifactId>
-    <version>0.1.0</version>
+    <version>0.10.0</version>
     <packaging>war</packaging>
 
     <properties>
@@ -34,9 +34,9 @@
             <artifactId>thymeleaf-spring3</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.cloudera.cdk.hbase</groupId>
+            <groupId>com.cloudera.kite.hbase</groupId>
             <artifactId>hbase-core</artifactId>
-            <version>0.9.1-SNAPSHOT</version>
+            <version>0.10.1-SNAPSHOT</version>
         </dependency>
         <dependency>
           <groupId>org.apache.hbase</groupId>
