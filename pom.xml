@@ -10,6 +10,7 @@
 
     <properties>
         <spring-boot-version>0.5.0.M6</spring-boot-version>
+        <cdh-version>cdh4.5.0</cdh-version>            
         <start-class>com.td.ecrr.Application</start-class>
     </properties>
 
@@ -35,8 +36,14 @@
         <dependency>
             <groupId>com.cloudera.cdk.hbase</groupId>
             <artifactId>hbase-core</artifactId>
-            <version>0.9.1-SNAPSHOT</version>
+            <version>0.10.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+          <groupId>org.apache.hbase</groupId>
+          <artifactId>hbase</artifactId>
+          <version>0.94.6-${cdh-version}</version>
+          <scope>runtime</scope>
+        </dependency>        
     </dependencies>
 
     <profiles>
@@ -104,6 +111,14 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+          <id>cdh.repo</id>
+          <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+          <name>Cloudera Repositories</name>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>        
     </repositories>
     <pluginRepositories>
         <pluginRepository>
