@@ -6,8 +6,8 @@ build hbase-core and then run:
 
 Prerequisties
 -------------
-- install Kite (kite-sdk/kite)
-- install hbase-core (coughman/hbase-core)
+- install Kite (https://github.com/kite-sdk/kite)
+- install hbase-core (https://github.com/coughman/hbase-core)
 
 Package the webapp
 ------------------
